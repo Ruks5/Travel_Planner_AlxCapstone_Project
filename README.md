@@ -1,105 +1,16 @@
-🌍 Travel Planner (FE Capstone Project)
-📖 Project Overview
+# React + Vite
 
-The Travel Planner is a frontend web application built with React, JavaScript, HTML, and CSS (with optional TailwindCSS).
-It allows users to search destinations, view detailed travel information, and create personalized itineraries.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-This project integrates the Amadeus API (along with optional APIs like Teleport for images and OpenWeatherMap for weather) to provide real-time travel data such as flights, hotels, and attractions.
+Currently, two official plugins are available:
 
-The goal of this project is to practice:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-API integration
+## React Compiler
 
-Managing user input
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-Building responsive, user-friendly interfaces
+## Expanding the ESLint configuration
 
-Organizing a project with reusable React components
-
-✨ Features
-🔎 Destination Search
-
-Search for destinations by city or keywords (e.g., Paris, beach vacation).
-
-View a list of results with:
-
-City name
-
-Country
-
-Representative image
-
-Popular attractions
-
-📍 Destination Details
-
-Detailed view of a selected destination including:
-
-Top attractions & activities
-
-Available flight offers (via Amadeus Flight Offers API)
-
-Hotel accommodations (via Amadeus Hotel Search API)
-
-Current & forecasted weather (via OpenWeatherMap API, optional)
-
-🗓️ Itinerary Planner
-
-Create, save, and manage custom travel itineraries
-
-Add destinations, flights, and hotels
-
-Specify dates & times for planned activities
-
-📱 Responsive Design
-
-Built with TailwindCSS for a clean and adaptive layout
-
-Optimized for desktop, tablet, and mobile devices
-
-⚠️ Error Handling
-
-User-friendly error messages for:
-
-Network issues
-
-Invalid API responses
-
-Empty search results
-
-🛠️ Technical Details
-🔧 Setup
-
-React project initialized with Vite (or custom setup)
-
-TailwindCSS for styling (optional, can use vanilla CSS)
-
-🌐 API Integrations
-
-Amadeus API for destinations, flights, and hotels
-
-Teleport API (optional) for destination images
-
-OpenWeatherMap API (optional) for weather data
-
-⚛️ UI Components
-
-SearchBar – for searching destinations
-
-DestinationCard – displays basic info about destinations
-
-ItineraryPlanner – manage user travel plans
-
-DestinationDetails – shows detailed travel info
-
-🔄 State Management
-
-React Hooks: useState, useEffect for state and data fetching
-
-Optional: Zustand / Redux for complex state management
-
-🚀 Deployment
-
-Deploy to Netlify or Vercel
-
-Ensure mobile-first responsiveness & accessibility
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
