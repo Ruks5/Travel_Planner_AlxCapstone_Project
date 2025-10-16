@@ -23,7 +23,7 @@ const PopularDestinations = () => {
     },
     {
       id: 4,
-      name: 'Monacco City',
+      name: 'Monaco City',
       image: 'https://images.unsplash.com/photo-1520106212299-d99c443e4568?w=800&q=80',
       description: 'Explore the luxury lifestyle'
     }
