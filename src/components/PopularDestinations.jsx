@@ -6,30 +6,26 @@ const PopularDestinations = () => {
     {
       id: 1,
       name: 'Venice, Italy',
-      country: 'Italy',
       image: 'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=800&q=80',
       description: 'Experience the magic of floating city'
     },
     {
       id: 2,
-      name: 'London, United Kingdom',
-      country: 'United Kingdom',
+      name: 'London, UK',
       image: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80',
       description: 'Discover the blend of history and modernity'
     },
     {
       id: 3,
       name: 'Santorini, Greece',
-      country: 'Greece',
       image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80',
       description: 'Stunning sunsets and white-washed buildings'
     },
     {
       id: 4,
-      name: 'Moscow City',
-      country: 'Russia',
+      name: 'Monacco City',
       image: 'https://images.unsplash.com/photo-1520106212299-d99c443e4568?w=800&q=80',
-      description: 'Explore the heart of Russian culture'
+      description: 'Explore the luxury lifestyle'
     }
   ];
 
@@ -37,7 +33,7 @@ const PopularDestinations = () => {
     <section className="py-20 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Explore Popular Destinations
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">

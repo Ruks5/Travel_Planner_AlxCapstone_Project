@@ -60,7 +60,7 @@ const TravelPackages = () => {
         </div>
 
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#0c2145' }}>
             Travel Packages
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -93,7 +93,7 @@ const TravelPackages = () => {
               </div>
 
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
+                <h4 className="text-xl font-bold mb-2">{pkg.name}</h4>
                 <p className="text-gray-600 text-sm mb-4">{pkg.description}</p>
 
                 <div className="flex items-center mb-4">
