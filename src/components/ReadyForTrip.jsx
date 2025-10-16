@@ -1,4 +1,5 @@
 import React from 'react';
+import Readyforyournexttrip from '../assets/Ready for your next trip.png';
 
 const ReadyForTrip = () => {
   return (
@@ -6,20 +7,23 @@ const ReadyForTrip = () => {
       <div className="max-w-7xl mx-auto">
         <div className="relative rounded-3xl overflow-hidden h-96 shadow-2xl">
           <img
-            src="https://images.unsplash.com/photo-1589197331516-6c0c9a4ab4d7?w=1600&q=80"
-            alt="Tropical destination"
+            src={Readyforyournexttrip}
+            alt="Ready for your next trip"
             className="w-full h-full object-cover"
           />
-          
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-600/60"></div>
-          
+
+          <div
+            className="absolute inset-0"
+            style={{
+            backgroundColor: 'rgba(12, 33, 69, 0.2)', // #0c2145 with 20% opacity
+            }}
+           ></div>
+
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fadeIn">
               Ready For Your Next Trip?
             </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl">
-              Start planning your dream vacation today with personalized recommendations
-            </p>
+            
             <button className="bg-white hover:bg-gray-100 text-sky-600 font-bold py-4 px-12 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl text-lg">
               Book Now
             </button>

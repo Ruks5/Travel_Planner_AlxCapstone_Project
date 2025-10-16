@@ -11,7 +11,12 @@ const Hero = () => {
           backgroundImage: `url(${HeroImage})`
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-blue-600/50"></div>
+        <div
+            className="absolute inset-0"
+            style={{
+            backgroundColor: 'rgba(12, 33, 69, 0.2)', // #0c2145 with 20% opacity
+            }}
+           ></div>
       </div>
 
       <div className="relative z-10 flex flex-col justify-center h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,9 +26,7 @@ const Hero = () => {
             Live it.<br />
             See the World.
           </h1>
-          <p className="text-xl text-white/90 mb-8 animate-fadeIn">
-            Discover your next adventure with personalized travel experiences
-          </p>
+        
         </div>
 
         <SearchBar />
