@@ -1,32 +1,36 @@
 import React from 'react';
 import DestinationCard from './DestinationCard';
+import venice from '../assets/Venice Italy.png';
+import london from '../assets/London Uk.png';
+import santorini from '../assets/santorini greece.png';
+import monaco from '../assets/monaco city.png';
 
 const PopularDestinations = () => {
   const destinations = [
     {
       id: 1,
       name: 'Venice, Italy',
-      image: 'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=800&q=80',
-      description: 'Experience the magic of floating city'
+      image: venice,
+      description: 'Experience the magic of the floating city',
     },
     {
       id: 2,
       name: 'London, UK',
-      image: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80',
-      description: 'Discover the blend of history and modernity'
+      image: london,
+      description: 'Discover the blend of history and modernity',
     },
     {
       id: 3,
       name: 'Santorini, Greece',
-      image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80',
-      description: 'Stunning sunsets and white-washed buildings'
+      image: santorini,
+      description: 'Marvel at the whitewashed beauty of the Aegean',
     },
     {
       id: 4,
       name: 'Monaco City',
-      image: 'https://images.unsplash.com/photo-1520106212299-d99c443e4568?w=800&q=80',
-      description: 'Explore the luxury lifestyle'
-    }
+      image: monaco,
+      description: 'Explore the luxury lifestyle',
+    },
   ];
 
   return (
