@@ -1,4 +1,8 @@
 import React from 'react';
+import BookingLogo from '../assets/Booking.com_logo2.png';
+import AirbnbLogo from '../assets/Airbnb_Logo_Bélo.svg.png';
+import TripAdvisorLogo from '../assets/TripAdvisor_Logo.svg.png';
+import WakanowLogo from '../assets/Wakanow-logo 1.png';
 
 const TravelPackages = () => {
   const packages = [
@@ -9,7 +13,7 @@ const TravelPackages = () => {
       rating: 4.8,
       reviews: 1234,
       image: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80',
-      description: 'Luxury overwater bungalows'
+      description: 'Luxury overwater bungalows',
     },
     {
       id: 2,
@@ -18,7 +22,7 @@ const TravelPackages = () => {
       rating: 4.9,
       reviews: 892,
       image: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80',
-      description: 'Modern comfort with spa access'
+      description: 'Modern comfort with spa access',
     },
     {
       id: 3,
@@ -27,7 +31,7 @@ const TravelPackages = () => {
       rating: 4.7,
       reviews: 567,
       image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80',
-      description: 'Traditional Greek hospitality'
+      description: 'Traditional Greek hospitality',
     },
     {
       id: 4,
@@ -36,31 +40,38 @@ const TravelPackages = () => {
       rating: 4.9,
       reviews: 2156,
       image: 'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=800&q=80',
-      description: 'Ultimate relaxation paradise'
-    }
+      description: 'Ultimate relaxation paradise',
+    },
   ];
 
   const sponsors = [
-    { name: 'Booking.com', logo: 'Booking.com' },
-    { name: 'Airbnb', logo: 'Airbnb' },
-    { name: 'TripAdvisor', logo: 'TripAdvisor' },
-    { name: 'Makanow', logo: 'Makanow' }
+    { logo: BookingLogo },
+    { logo: AirbnbLogo },
+    { logo: TripAdvisorLogo },
+    { logo: WakanowLogo },
   ];
 
   return (
     <section className="py-20 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center justify-center space-x-8 mb-16">
-          <span className="text-gray-600 font-medium">Our Travel Sponsors</span>
+        {/* Sponsor Logos */}
+        <div className="flex items-center justify-center space-x-8 mb-16 flex-wrap gap-6">
           {sponsors.map((sponsor, index) => (
-            <div key={index} className="text-2xl font-bold text-gray-800">
-              {sponsor.logo}
-            </div>
+            <img
+              key={index}
+              src={sponsor.logo}
+              alt={`Sponsor ${index + 1}`}
+              className="h-12 object-contain transition-transform duration-300 hover:scale-110 hover:opacity-80"
+            />
           ))}
         </div>
 
+        {/* Section Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#0c2145' }}>
+          <h2
+            className="text-4xl md:text-5xl font-bold mb-4"
+            style={{ color: '#0c2145' }}
+          >
             Travel Packages
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -68,9 +79,13 @@ const TravelPackages = () => {
           </p>
         </div>
 
+        {/* Package Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {packages.map((pkg) => (
-            <div key={pkg.id} className="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+            <div
+              key={pkg.id}
+              className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-[1.02]"
+            >
               <div className="relative h-56">
                 <img
                   src={pkg.image}
@@ -97,21 +112,43 @@ const TravelPackages = () => {
                 <p className="text-gray-600 text-sm mb-4">{pkg.description}</p>
 
                 <div className="flex items-center mb-4">
-                  <div className="flex items-center">
-                    <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                    <span className="ml-2 text-gray-700 font-semibold">{pkg.rating}</span>
-                    <span className="ml-2 text-gray-500 text-sm">({pkg.reviews})</span>
-                  </div>
+                  <svg
+                    className="w-5 h-5 text-yellow-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <span className="ml-2 text-gray-700 font-semibold">
+                    {pkg.rating}
+                  </span>
+                  <span className="ml-2 text-gray-500 text-sm">
+                    ({pkg.reviews})
+                  </span>
                 </div>
 
                 <div className="flex items-center justify-between">
                   <div>
                     <span className="text-sm text-gray-500">From</span>
-                    <p className="text-2xl font-bold text-sky-600">${pkg.price}</p>
+                    <p
+                      className="text-2xl font-bold"
+                      style={{ color: '#0c2145' }}
+                    >
+                      ${pkg.price}
+                    </p>
                   </div>
-                  <button className="bg-sky-600 hover:bg-sky-700 text-white px-6 py-2 rounded-lg transition-colors font-medium">
+                  <button
+                    className="text-white px-5 py-2 rounded-md font-medium transition-all duration-300 shadow-md"
+                    style={{
+                      backgroundColor: '#0c2145',
+                    }}
+                    onMouseOver={(e) =>
+                      (e.currentTarget.style.backgroundColor = '#1a2d5c')
+                    }
+                    onMouseOut={(e) =>
+                      (e.currentTarget.style.backgroundColor = '#0c2145')
+                    }
+                  >
                     Book Now
                   </button>
                 </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchBar from './SearchBar';
+import HeroImage from '../assets/Hero Image.png';
 
 const Hero = () => {
   return (
@@ -7,7 +8,7 @@ const Hero = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=1920&q=80')`,
+          backgroundImage: `url(${HeroImage})`
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-blue-600/50"></div>
