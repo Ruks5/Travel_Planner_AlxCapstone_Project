@@ -38,7 +38,7 @@ const TravelPackages = () => {
     },
     {
       id: 4,
-      name: 'Luxury Resort Hotel & Spa',
+      name: 'Resort Hotel & Spa',
       price: 3200,
       rating: 4.9,
       reviews: 2156,
@@ -58,7 +58,7 @@ const TravelPackages = () => {
   return (
     <section className="py-20 px-4 bg-white">
       {/* FULL-WIDTH SPONSOR SECTION */}
-      <div className="w-screen bg-gray-100 py-10 mb-16 relative left-[50%] right-[50%] -mx-[50vw]">
+      <div className="w-screen bg-gray-100 py-10 mb-24 relative left-[50%] right-[50%] -mx-[50vw]">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center md:justify-start gap-x-12 gap-y-6 px-6">
           {/* Text and Logos on same row */}
           <div className="flex items-center flex-wrap gap-x-10 gap-y-6">

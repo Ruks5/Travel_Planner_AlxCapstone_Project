@@ -52,9 +52,11 @@ const PopularDestinations = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+          <button
+            className="bg-[#0c2145] hover:bg-[#0a1b39] text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
             View All Destinations
           </button>
+
         </div>
       </div>
     </section>

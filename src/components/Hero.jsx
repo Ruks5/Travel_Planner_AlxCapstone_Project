@@ -1,5 +1,4 @@
 import React from 'react';
-import SearchBar from './SearchBar';
 import HeroImage from '../assets/Hero Image.png';
 
 
@@ -30,25 +29,10 @@ const Hero = () => {
         
         </div>
 
-        <SearchBar />
+        
       </div>
-
-      <div className="absolute bottom-8 -1/2 transform -translate-x-1/2 animate-bounce">
-        <svg
-          className="w-8 h-8 text-white"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 14l-7 7m0 0l-7-7m7 7V3"
-          />
-        </svg>
+  
       </div>
-    </div>
   );
 };
 

@@ -24,19 +24,19 @@ const Navbar = () => {
 
           {/* Middle: Nav Links */}
           <div className="hidden md:flex flex-1 justify-center items-center space-x-8">
-            <Link to="/" className="text-[#0c2145] hover:text-sky-600 transition-colors">
+            <Link to="/" className="text-[#0c2145] hover:text-sky-600 transition-colors font-medium">
               Home
             </Link>
-            <Link to="/destinations" className="text-[#0c2145] hover:text-sky-600 transition-colors">
+            <Link to="/destinations" className="text-[#0c2145] hover:text-sky-600 transition-colors font-medium">
               Destination
             </Link>
-            <Link to="/itinerary" className="text-[#0c2145] hover:text-sky-600 transition-colors">
+            <Link to="/itinerary" className="text-[#0c2145] hover:text-sky-600 transition-colors font-medium">
               Itinerary
             </Link>
-            <Link to="/about" className="text-[#0c2145] hover:text-sky-600 transition-colors">
+            <Link to="/about" className="text-[#0c2145] hover:text-sky-600 transition-colors font-medium">
               About Us
             </Link>
-            <Link to="/contact" className="text-[#0c2145] hover:text-sky-600 transition-colors">
+            <Link to="/contact" className="text-[#0c2145] hover:text-sky-600 transition-colors font-medium">
               Contact Us
             </Link>
           </div>

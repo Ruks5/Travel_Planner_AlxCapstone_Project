@@ -36,7 +36,7 @@ const SearchBar = () => {
       </div>
 
       <form onSubmit={handleSearch}>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-4 items-end">
           <div className="md:col-span-2">
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Destination
@@ -94,14 +94,16 @@ const SearchBar = () => {
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
             />
           </div>
-        </div>
 
-        <button
-          type="submit"
-          className="w-full md:w-auto mt-6 bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 px-12 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-        >
-          Search
-        </button>
+          <div>
+            <button
+              type="submit"
+              className="w-full bg-[#0c2145] hover:bg-[#0a1b39] text-white font-semibold py-3 px-12 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Search
+            </button>
+          </div>
+        </div>
       </form>
     </div>
   );
