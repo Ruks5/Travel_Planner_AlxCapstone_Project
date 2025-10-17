@@ -69,7 +69,7 @@ const TravelPackages = () => {
         {/* Section Heading */}
         <div className="text-center mb-12">
           <h2
-            className="text-4xl md:text-5xl font-bold mb-4"
+            className="text-4xl md:text-5xl font-semibold mb-4"
             style={{ color: '#0c2145' }}
           >
             Travel Packages

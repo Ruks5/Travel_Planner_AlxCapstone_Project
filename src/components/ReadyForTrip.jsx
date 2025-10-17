@@ -5,7 +5,8 @@ const ReadyForTrip = () => {
   return (
     <section className="py-20 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="relative rounded-3xl overflow-hidden h-96 shadow-2xl">
+        <div className="relative rounded-3xl overflow-hidden h-[70vh] shadow-2xl">
+
           <img
             src={Readyforyournexttrip}
             alt="Ready for your next trip"
@@ -24,9 +25,10 @@ const ReadyForTrip = () => {
               Ready For Your Next Trip?
             </h2>
             
-            <button className="bg-white hover:bg-gray-100 text-sky-600 font-bold py-4 px-12 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl text-lg">
-              Book Now
-            </button>
+          <button className="bg-[#0c2145] hover:bg-[#102c63] text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+            Book Now
+          </button>
+
           </div>
 
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-blue-900/90 to-transparent"></div>
