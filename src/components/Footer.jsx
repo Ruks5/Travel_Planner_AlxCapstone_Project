@@ -1,23 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Verelmundo from "../assets/Verelmundo.png"; // ← update the filename if needed
+import VerElMundo from "../assets/VerElMundo.png";
+import facebook from "../assets/facebook.png";
+import twitter from "../assets/twitter.png";
+import instagram from "../assets/instagram.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-[#0c2145]">
-      <div className="max-w-7xl mx-auto py-16 px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+    <footer className="bg-gray-100 text-[#0c2145]">
+      {/* Top Section */}
+      <div className="max-w-7xl mx-auto py-16 px-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-12 text-sm">
         {/* Logo */}
-        <div>
-          <img
-            src={Verelmundo}
-            alt="Ver el mundo"
-            className="w-40 h-auto mb-6"
-          />
+        <div className="col-span-2 md:col-span-1 flex flex-col items-start">
+          <img src={VerElMundo} alt="Ver el Mundo" className="w-40 h-auto mb-6" />
         </div>
 
         {/* About Us */}
         <div>
-          <h4 className="font-semibold mb-4">About Us</h4>
+          <h4 className="font-bold mb-4">About Us</h4>
           <ul className="space-y-2">
             <li><Link to="/about" className="hover:underline">About Us</Link></li>
             <li><Link to="/destinations" className="hover:underline">Destination</Link></li>
@@ -27,7 +27,7 @@ const Footer = () => {
 
         {/* Company */}
         <div>
-          <h4 className="font-semibold mb-4">Company</h4>
+          <h4 className="font-bold mb-4">Company</h4>
           <ul className="space-y-2">
             <li><Link to="/careers" className="hover:underline">Careers</Link></li>
             <li><Link to="/privacy" className="hover:underline">Privacy & Policy</Link></li>
@@ -38,7 +38,7 @@ const Footer = () => {
 
         {/* Policy */}
         <div>
-          <h4 className="font-semibold mb-4">Policy</h4>
+          <h4 className="font-bold mb-4">Policy</h4>
           <ul className="space-y-2">
             <li><Link to="/terms" className="hover:underline">Term of use</Link></li>
             <li><Link to="/conditions" className="hover:underline">Terms & Conditions</Link></li>
@@ -47,7 +47,7 @@ const Footer = () => {
 
         {/* Help */}
         <div>
-          <h4 className="font-semibold mb-4">Help</h4>
+          <h4 className="font-bold mb-4">Help</h4>
           <ul className="space-y-2">
             <li><Link to="/support" className="hover:underline">Support</Link></li>
             <li><Link to="/contact" className="hover:underline">Contact</Link></li>
@@ -61,22 +61,32 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="bg-[#0c2145] text-white">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between py-6 px-4">
+          
           {/* Social Icons */}
           <div className="flex space-x-4 mb-4 md:mb-0">
-            <a href="#" className="border border-white/70 p-2 rounded-md hover:bg-white hover:text-[#0c2145] transition">
-              <i className="fab fa-facebook-f"></i>
+            <a
+              href="#"
+              className="p-2 rounded-full transition transform hover:scale-110 hover:bg-[#3b5998]"
+            >
+              <img src={facebook} alt="Facebook" className="w-7 h-7" />
             </a>
-            <a href="#" className="border border-white/70 p-2 rounded-md hover:bg-white hover:text-[#0c2145] transition">
-              <i className="fab fa-twitter"></i>
+            <a
+              href="#"
+              className="p-2 rounded-full transition transform hover:scale-110 hover:bg-[#1DA1F2]"
+            >
+              <img src={twitter} alt="Twitter" className="w-7 h-7" />
             </a>
-            <a href="#" className="border border-white/70 p-2 rounded-md hover:bg-white hover:text-[#0c2145] transition">
-              <i className="fab fa-instagram"></i>
+            <a
+              href="#"
+              className="p-2 rounded-full transition transform hover:scale-110 hover:bg-[#E4405F]"
+            >
+              <img src={instagram} alt="Instagram" className="w-7 h-7" />
             </a>
           </div>
 
           {/* Copyright */}
           <p className="text-sm text-center md:text-right">
-            Copyright © Ver el Mundo 2025, All rights reserved.
+            © 2025 Ver el Mundo. All rights reserved.
           </p>
         </div>
       </div>
