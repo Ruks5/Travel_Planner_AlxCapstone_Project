@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import VerElMundo from "../assets/VerElMundo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,37 +10,48 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute top-0 left-0 right-0 z-50 bg-transparent">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-6">
-          <Link to="/" className="text-2xl font-bold text-white">
-            Verel Mundo
+        <div className="flex justify-between items-center py-4">
+          {/* Left: Logo */}
+          <Link to="/" className="flex items-center">
+            <img
+              src={VerElMundo}
+              alt="Ver El Mundo"
+              className="h-8 w-auto"
+            />
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-white hover:text-sky-200 transition-colors">
+          {/* Middle: Nav Links */}
+          <div className="hidden md:flex flex-1 justify-center items-center space-x-8">
+            <Link to="/" className="text-[#0c2145] hover:text-sky-600 transition-colors">
               Home
             </Link>
-            <Link to="/destinations" className="text-white hover:text-sky-200 transition-colors">
+            <Link to="/destinations" className="text-[#0c2145] hover:text-sky-600 transition-colors">
               Destination
             </Link>
-            <Link to="/itinerary" className="text-white hover:text-sky-200 transition-colors">
+            <Link to="/itinerary" className="text-[#0c2145] hover:text-sky-600 transition-colors">
               Itinerary
             </Link>
-            <Link to="/about" className="text-white hover:text-sky-200 transition-colors">
+            <Link to="/about" className="text-[#0c2145] hover:text-sky-600 transition-colors">
               About Us
             </Link>
-            <Link to="/contact" className="text-white hover:text-sky-200 transition-colors">
+            <Link to="/contact" className="text-[#0c2145] hover:text-sky-600 transition-colors">
               Contact Us
             </Link>
-            <button className="bg-sky-600 hover:bg-sky-700 text-white px-6 py-2 rounded-lg transition-colors font-medium">
+          </div>
+
+          {/* Right: Book Button */}
+          <div className="hidden md:flex items-center">
+            <button className="bg-[#0c2145] hover:bg-sky-700 text-white px-6 py-2 rounded-lg transition-colors font-medium">
               Book Now
             </button>
           </div>
 
+          {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden text-white focus:outline-none"
+            className="md:hidden text-[#0c2145] focus:outline-none"
           >
             <svg
               className="w-6 h-6"
@@ -66,44 +78,45 @@ const Navbar = () => {
           </button>
         </div>
 
+        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden bg-white rounded-lg shadow-lg py-4 px-4 mb-4">
             <Link
               to="/"
-              className="block py-2 text-gray-800 hover:text-sky-600 transition-colors"
+              className="block py-2 text-[#0c2145] hover:text-sky-600 transition-colors"
               onClick={toggleMenu}
             >
               Home
             </Link>
             <Link
               to="/destinations"
-              className="block py-2 text-gray-800 hover:text-sky-600 transition-colors"
+              className="block py-2 text-[#0c2145] hover:text-sky-600 transition-colors"
               onClick={toggleMenu}
             >
               Destination
             </Link>
             <Link
               to="/itinerary"
-              className="block py-2 text-gray-800 hover:text-sky-600 transition-colors"
+              className="block py-2 text-[#0c2145] hover:text-sky-600 transition-colors"
               onClick={toggleMenu}
             >
               Itinerary
             </Link>
             <Link
               to="/about"
-              className="block py-2 text-gray-800 hover:text-sky-600 transition-colors"
+              className="block py-2 text-[#0c2145] hover:text-sky-600 transition-colors"
               onClick={toggleMenu}
             >
               About Us
             </Link>
             <Link
               to="/contact"
-              className="block py-2 text-gray-800 hover:text-sky-600 transition-colors"
+              className="block py-2 text-[#0c2145] hover:text-sky-600 transition-colors"
               onClick={toggleMenu}
             >
               Contact Us
             </Link>
-            <button className="w-full mt-4 bg-sky-600 hover:bg-sky-700 text-white px-6 py-2 rounded-lg transition-colors font-medium">
+            <button className="w-full mt-4 bg-[#0c2145] hover:bg-sky-700 text-white px-6 py-2 rounded-lg transition-colors font-medium">
               Book Now
             </button>
           </div>

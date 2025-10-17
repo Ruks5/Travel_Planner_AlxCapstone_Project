@@ -2,6 +2,7 @@ import React from 'react';
 import SearchBar from './SearchBar';
 import HeroImage from '../assets/Hero Image.png';
 
+
 const Hero = () => {
   return (
     <div className="relative h-screen">
@@ -32,7 +33,7 @@ const Hero = () => {
         <SearchBar />
       </div>
 
-      <div className="absolute bottom-8 center-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 -1/2 transform -translate-x-1/2 animate-bounce">
         <svg
           className="w-8 h-8 text-white"
           fill="none"

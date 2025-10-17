@@ -6,7 +6,7 @@ const DestinationCard = ({ destination }) => {
 
   return (
     <Link to={`/destination/${id}`}>
-      <div className="group relative overflow-hidden rounded-2xl shadow-lg card-hover h-80">
+      <div className="group relative overflow-hidden rounded-2xl shadow-lg card-hover h-[60vh]">
         <img
           src={image}
           alt={name}
