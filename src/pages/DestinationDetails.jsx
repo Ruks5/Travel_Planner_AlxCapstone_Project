@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import MonacoHarbor from '../assets/Monaco harbor.jpg';
+import MonacoHarbor from '../assets/Monaco Harbor.jpg';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { getFlightOffers, getHotelOffers, getPointsOfInterest } from '../services/amadeusApi';
 
-// Destination data
 const destinationsData = {
   '1': {
     name: 'Venice',
