@@ -26,8 +26,8 @@ const SearchBar = () => {
             onClick={() => setActiveTab(tab)}
             className={`pb-3 px-4 font-medium transition-all ${
               activeTab === tab
-                ? 'text-sky-600 border-b-2 border-sky-600'
-                : 'text-gray-600 hover:text-sky-600'
+                ? 'text-sky-950 border-b-2 border-brand'
+                : 'text-gray-600 hover:text-sky-700'
             }`}
           >
             {tab}
@@ -98,7 +98,7 @@ const SearchBar = () => {
           <div>
             <button
               type="submit"
-              className="w-full bg-[#0c2145] hover:bg-[#0a1b39] text-white font-semibold py-3 px-12 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="w-full bg-[#0c2145] hover:bg-[#102c63] text-white font-semibold py-3 px-12 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Search
             </button>

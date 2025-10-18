@@ -1,43 +1,43 @@
 import React from 'react';
 import DestinationCard from './DestinationCard';
-import venice from '../assets/Venice Italy.png';
-import london from '../assets/London Uk.png';
-import santorini from '../assets/santorini greece.png';
-import monaco from '../assets/monaco city.png';
+import VeniceItaly from '../assets/Venice Italy.png';
+import LondonUK from '../assets/London Uk.png';
+import SantoriniGreece from '../assets/Santorini Greece.png';
+import Monacocity from '../assets/Monaco city.png';
 
 const PopularDestinations = () => {
   const destinations = [
     {
       id: 1,
       name: 'Venice, Italy',
-      image: venice,
-      description: 'Experience the magic of the floating city',
+      image: VeniceItaly,
+      description: 'Experience the magic of floating city'
     },
     {
       id: 2,
       name: 'London, UK',
-      image: london,
-      description: 'Discover the blend of history and modernity',
+      image: LondonUK,
+      description: 'Discover the blend of history and modernity'
     },
     {
       id: 3,
       name: 'Santorini, Greece',
-      image: santorini,
-      description: 'Marvel at the whitewashed beauty of the Aegean',
+      image: SantoriniGreece,
+      description: 'Stunning sunsets and white-washed buildings'
     },
     {
       id: 4,
-      name: 'Monaco City',
-      image: monaco,
-      description: 'Explore the luxury lifestyle',
-    },
+      name: 'Monaco',
+      image: Monacocity,
+      description: 'Luxury and glamour in the Mediterranean'
+    }
   ];
 
   return (
     <section className="py-20 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-semibold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Explore Popular Destinations
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -52,11 +52,9 @@ const PopularDestinations = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button
-            className="bg-[#0c2145] hover:bg-[#0a1b39] text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+          <button className="bg-[#0c2145] hover:bg-[#102c63] text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
             View All Destinations
           </button>
-
         </div>
       </div>
     </section>

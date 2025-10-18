@@ -123,10 +123,10 @@ const Itinerary = () => {
                           </div>
                           
                           <div className="mt-4 flex space-x-4">
-                            <button className="text-sky-600 hover:text-sky-700 font-medium transition-colors text-sm">
+                            <button className="text-brand hover:text-sky-700 font-medium transition-colors text-sm">
                               Add Notes
                             </button>
-                            <button className="text-sky-600 hover:text-sky-700 font-medium transition-colors text-sm">
+                            <button className="text-brand hover:text-sky-700 font-medium transition-colors text-sm">
                               Set Dates
                             </button>
                           </div>
@@ -183,7 +183,7 @@ const Itinerary = () => {
                   <button
                     onClick={saveTrip}
                     disabled={itinerary.length === 0}
-                    className="w-full bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed mt-6"
+                    className="w-full bg-[#0c2145] hover:bg-[#102c63] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed mt-6"
                   >
                     Save Trip
                   </button>

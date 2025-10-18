@@ -1,12 +1,58 @@
 import React, { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useNavigate } from 'react-router-dom';
+import MonacoHarbor from '../assets/Monaco Harbor.jpg';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import DestinationCard from '../components/DestinationCard';
 import { searchDestinations } from '../services/amadeusApi';
 
+// Popular destinations data
+const popularDestinations = [
+  {
+    id: 1,
+    name: 'Venice',
+    country: 'Italy',
+    iataCode: 'VCE',
+    image: 'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=800&q=80',
+    description: 'Experience the magic of floating city',
+    latitude: 45.4408,
+    longitude: 12.3155
+  },
+  {
+    id: 2,
+    name: 'London',
+    country: 'United Kingdom',
+    iataCode: 'LON',
+    image: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80',
+    description: 'Discover the blend of history and modernity',
+    latitude: 51.5074,
+    longitude: -0.1278
+  },
+  {
+    id: 3,
+    name: 'Santorini',
+    country: 'Greece',
+    iataCode: 'JTR',
+    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80',
+    description: 'Stunning sunsets and white-washed buildings',
+    latitude: 36.3932,
+    longitude: 25.4615
+  },
+  {
+    id: 4,
+    name: 'Monaco',
+    country: 'Monaco',
+    iataCode: 'MCM',
+    image: MonacoHarbor ,
+    description: 'Luxury and glamour in the Mediterranean',
+    latitude: 43.7384,
+    longitude: 7.4246
+  }
+];
+
 const Destinations = () => {
   const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
   const [destinations, setDestinations] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -25,6 +71,20 @@ const Destinations = () => {
     setLoading(true);
     setError(null);
 
+    // First, check if it matches any popular destinations
+    const matchedPopular = popularDestinations.filter(dest => 
+      dest.name.toLowerCase().includes(query.toLowerCase()) ||
+      dest.country.toLowerCase().includes(query.toLowerCase())
+    );
+
+    if (matchedPopular.length > 0) {
+      // If we found matches in popular destinations, show them
+      setDestinations(matchedPopular);
+      setLoading(false);
+      return;
+    }
+
+    // If no popular matches, search via API
     try {
       const response = await searchDestinations(query);
       
@@ -75,7 +135,7 @@ const Destinations = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="bg-sky-700 hover:bg-sky-800 text-white px-8 py-4 rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-[#0c2145] hover:bg-[#102c63] text-white px-8 py-4 rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? 'Searching...' : 'Search'}
               </button>
@@ -103,14 +163,23 @@ const Destinations = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
             <h3 className="text-2xl font-semibold text-gray-700 mb-2">No destinations found</h3>
-            <p className="text-gray-500">Try searching with different keywords</p>
+            <p className="text-gray-500 mb-6">Try searching for: Venice, London, Santorini, or Monaco</p>
+            <button
+              onClick={() => {
+                setSearchQuery('');
+                setDestinations([]);
+              }}
+              className="text-sky-600 hover:text-sky-700 font-medium"
+            >
+              Clear search
+            </button>
           </div>
         )}
 
         {!loading && destinations.length > 0 && (
           <>
             <div className="mb-6">
-              <h2 className="text-2xl font-bold text-gray-900">
+              <h2 className="text-2xl font-bold" style={{ color: '#0c2145' }}>
                 Found {destinations.length} destination{destinations.length !== 1 ? 's' : ''}
               </h2>
             </div>
