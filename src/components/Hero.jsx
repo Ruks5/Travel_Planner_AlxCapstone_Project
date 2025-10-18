@@ -14,18 +14,18 @@ const Hero = () => {
         <div
             className="absolute inset-0"
             style={{
-            backgroundColor: 'rgba(12, 33, 69, 0.2)', // #0c2145 with 20% opacity
+            backgroundColor: 'rgba(12, 33, 69, 0.2)', 
             }}
            ></div>
       </div>
 
       <div className="relative z-10 flex flex-col justify-center h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight mb-6 animate-fadeIn">
-            Plan it.<br />
-            Live it.<br />
-            See the World.
-          </h1>
+         <h1 className="leading-tight text-white animate-fadeIn">
+          <span className="text-4xl md:text-5xl font-extrabold">Plan it.</span><br />
+          <span className="text-5xl md:text-7xl font-extrabold">Live it.</span><br />
+          <span className="text-6xl md:text-7xl font-extrabold">See the World.</span>
+         </h1>
         
         </div>
 

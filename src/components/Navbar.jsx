@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          {/* Left: Logo */}
+          
           <Link to="/" className="flex items-center">
             <img
               src={VerElMundo}
@@ -22,7 +22,6 @@ const Navbar = () => {
             />
           </Link>
 
-          {/* Middle: Nav Links */}
           <div className="hidden md:flex flex-1 justify-center items-center space-x-8">
             <Link to="/" className="text-[#0c2145] hover:text-sky-600 transition-colors font-medium">
               Home
@@ -41,14 +40,13 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Right: Book Button */}
           <div className="hidden md:flex items-center">
             <button className="bg-[#0c2145] hover:bg-sky-700 text-white px-6 py-2 rounded-lg transition-colors font-medium">
               Book Now
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
+          
           <button
             onClick={toggleMenu}
             className="md:hidden text-[#0c2145] focus:outline-none"
@@ -78,7 +76,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        
         {isMenuOpen && (
           <div className="md:hidden bg-white rounded-lg shadow-lg py-4 px-4 mb-4">
             <Link

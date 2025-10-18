@@ -18,16 +18,15 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-2xl p-6 max-w-5xl animate-fadeIn">
+    <div className="bg-white rounded-xl shadow p-6 max-w-5xl mx-auto">
+      
       <div className="flex space-x-4 mb-6 border-b">
         {tabs.map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`pb-3 px-4 font-medium transition-all ${
-              activeTab === tab
-                ? 'text-sky-950 border-b-2 border-brand'
-                : 'text-gray-600 hover:text-sky-700'
+            className={`pb-2 px-4 font-medium ${
+              activeTab === tab ? 'border-b-2 border-sky-900 text-brand' : 'text-gray-600'
             }`}
           >
             {tab}
@@ -35,71 +34,48 @@ const SearchBar = () => {
         ))}
       </div>
 
+      
       <form onSubmit={handleSearch}>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4 items-end">
-          <div className="md:col-span-2">
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Destination
-            </label>
-            <div className="relative">
-              <svg
-                className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                />
-              </svg>
-              <input
-                type="text"
-                placeholder="Where are you going?"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
-              />
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
+          
+          <div>
+            <label className="block text-sm font-medium mb-1">Destination</label>
+            <input
+              type="text"
+              placeholder="Where to..?"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-brand"
+            />
           </div>
 
+          
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Check-in
-            </label>
+            <label className="block text-sm font-medium mb-1">Check-in</label>
             <input
               type="date"
               value={checkIn}
               onChange={(e) => setCheckIn(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-brand"
             />
           </div>
 
+          
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Check-out
-            </label>
+            <label className="block text-sm font-medium mb-1">Check-out</label>
             <input
               type="date"
               value={checkOut}
               onChange={(e) => setCheckOut(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-brand"
             />
           </div>
 
+        
           <div>
             <button
               type="submit"
-              className="w-full bg-[#0c2145] hover:bg-[#102c63] text-white font-semibold py-3 px-12 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
+              className="bg-[#0c2145] hover:bg-[#102c63] text-white font-semibold py-3 px-16 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
               Search
             </button>
           </div>

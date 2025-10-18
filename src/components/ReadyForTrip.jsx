@@ -16,7 +16,7 @@ const ReadyForTrip = () => {
           <div
             className="absolute inset-0"
             style={{
-            backgroundColor: 'rgba(12, 33, 69, 0.2)', // #0c2145 with 20% opacity
+            backgroundColor: 'rgba(12, 33, 69, 0.2)', 
             }}
            ></div>
 

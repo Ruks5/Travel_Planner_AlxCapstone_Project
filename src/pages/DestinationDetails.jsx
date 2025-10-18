@@ -63,7 +63,7 @@ const DestinationDetails = () => {
   const [loading, setLoading] = useState(false);
   const [weather] = useState({ temp: 18, condition: 'Partly Cloudy' });
 
-  // Get destination data based on ID
+  // Get destination data using ID
   const destination = destinationsData[id] || destinationsData['1'];
 
   const loadFlights = async () => {
@@ -73,7 +73,7 @@ const DestinationDetails = () => {
       const nextWeek = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
       const departureDate = nextWeek.toISOString().split('T')[0];
       
-      // Using NYC as origin - you can make this dynamic
+      // Using NYC as origin for demo purposes
       const response = await getFlightOffers('NYC', destination.cityCode, departureDate);
       setFlights(response.data || []);
     } catch (error) {
@@ -131,7 +131,6 @@ const DestinationDetails = () => {
   const addToItinerary = () => {
     const itinerary = JSON.parse(localStorage.getItem('itinerary') || '[]');
     
-    // Check if already added
     const alreadyExists = itinerary.some(item => item.id === destination.cityCode);
     if (alreadyExists) {
       alert('This destination is already in your itinerary!');

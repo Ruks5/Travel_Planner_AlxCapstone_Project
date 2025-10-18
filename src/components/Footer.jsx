@@ -8,14 +8,14 @@ import instagram from "../assets/instagram.png";
 const Footer = () => {
   return (
     <footer className="bg-gray-100 text-[#0c2145]">
-      {/* Top Section */}
+      
       <div className="max-w-7xl mx-auto py-16 px-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-12 text-sm">
-        {/* Logo */}
+        
         <div className="col-span-2 md:col-span-1 flex flex-col items-start">
           <img src={VerElMundo} alt="Ver el Mundo" className="w-40 h-auto mb-6" />
         </div>
 
-        {/* About Us */}
+        
         <div>
           <h4 className="font-bold mb-4">About Us</h4>
           <ul className="space-y-2">
@@ -25,7 +25,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Company */}
+        
         <div>
           <h4 className="font-bold mb-4">Company</h4>
           <ul className="space-y-2">
@@ -36,7 +36,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Policy */}
+        
         <div>
           <h4 className="font-bold mb-4">Policy</h4>
           <ul className="space-y-2">
@@ -45,7 +45,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Help */}
+       
         <div>
           <h4 className="font-bold mb-4">Help</h4>
           <ul className="space-y-2">
@@ -58,11 +58,11 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
+      
       <div className="bg-[#0c2145] text-white">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between py-6 px-4">
           
-          {/* Social Icons */}
+
           <div className="flex space-x-4 mb-4 md:mb-0">
             <a
               href="#"
@@ -84,7 +84,7 @@ const Footer = () => {
             </a>
           </div>
 
-          {/* Copyright */}
+          
           <p className="text-sm text-center md:text-right">
             © 2025 Ver el Mundo. All rights reserved.
           </p>
