@@ -14,7 +14,6 @@ const Home = () => {
       <Navbar />
       <Hero />
 
-      {/* Search bar positioned below the hero image */}
       <div className="relative z-20 -mt-16 flex justify-center px-4">
         <SearchBar />
       </div>
