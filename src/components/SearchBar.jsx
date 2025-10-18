@@ -18,7 +18,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow p-6 max-w-5xl mx-auto">
+    <div className="bg-white rounded-xl shadow-xl p-6 max-w-5xl mx-auto">
       
       <div className="flex space-x-4 mb-6 border-b">
         {tabs.map((tab) => (

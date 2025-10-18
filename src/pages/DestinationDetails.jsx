@@ -44,7 +44,7 @@ const destinationsData = {
     name: 'Monaco',
     country: 'Monaco',
     image: MonacoHarbor,
-    description: 'Luxury and glamour await in this stunning Mediterranean principality, known for its casinos, yacht-lined harbor, and prestigious Grand Prix.',
+    description: 'ury and glamour await in this stunning Mediterranean principality, known for its casinos, yacht-lined harbor, and prestigious Grand Prix.',
     cityCode: 'MCM',
     latitude: 43.7384,
     longitude: 7.4246,
@@ -63,7 +63,7 @@ const DestinationDetails = () => {
   const [loading, setLoading] = useState(false);
   const [weather] = useState({ temp: 18, condition: 'Partly Cloudy' });
 
-  // Get destination data using ID
+  
   const destination = destinationsData[id] || destinationsData['1'];
 
   const loadFlights = async () => {
@@ -73,7 +73,7 @@ const DestinationDetails = () => {
       const nextWeek = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
       const departureDate = nextWeek.toISOString().split('T')[0];
       
-      // Using NYC as origin for demo purposes
+      
       const response = await getFlightOffers('NYC', destination.cityCode, departureDate);
       setFlights(response.data || []);
     } catch (error) {
@@ -111,7 +111,7 @@ const DestinationDetails = () => {
   };
 
   useEffect(() => {
-    // Reset data when destination changes
+    
     setFlights([]);
     setHotels([]);
     setAttractions([]);

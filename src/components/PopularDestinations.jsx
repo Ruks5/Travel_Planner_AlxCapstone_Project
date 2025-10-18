@@ -11,25 +11,25 @@ const PopularDestinations = () => {
       id: 1,
       name: 'Venice, Italy',
       image: VeniceItaly,
-      description: 'Experience the magic of floating city'
+      description: 'The floating city'
     },
     {
       id: 2,
       name: 'London, UK',
       image: LondonUK,
-      description: 'Discover the blend of history and modernity'
+      description: 'Explore historical landmarks'
     },
     {
       id: 3,
       name: 'Santorini, Greece',
       image: SantoriniGreece,
-      description: 'Stunning sunsets and white-washed buildings'
+      description: 'Stunning sunsets and crystal-clear waters'
     },
     {
       id: 4,
       name: 'Monaco',
       image: Monacocity,
-      description: 'Luxury and glamour in the Mediterranean'
+      description: 'Home of the prestigious Grand Prix'
     }
   ];
 

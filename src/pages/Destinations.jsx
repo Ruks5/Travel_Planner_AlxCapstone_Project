@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import DestinationCard from '../components/DestinationCard';
 import { searchDestinations } from '../services/amadeusApi';
 
-// Popular destinations data
+
 const popularDestinations = [
   {
     id: 1,
@@ -71,20 +71,20 @@ const Destinations = () => {
     setLoading(true);
     setError(null);
 
-    // First, check if it matches any popular destinations
+    
     const matchedPopular = popularDestinations.filter(dest => 
       dest.name.toLowerCase().includes(query.toLowerCase()) ||
       dest.country.toLowerCase().includes(query.toLowerCase())
     );
 
     if (matchedPopular.length > 0) {
-      // If we found matches in popular destinations, show them
+      
       setDestinations(matchedPopular);
       setLoading(false);
       return;
     }
 
-    // If no popular matches, search via API
+    
     try {
       const response = await searchDestinations(query);
       
@@ -130,7 +130,7 @@ const Destinations = () => {
                 placeholder="Search for a destination..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="flex-1 px-6 py-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-300 text-lg"
+                className="flex-1 px-6 py-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand text-lg"
               />
               <button
                 type="submit"
