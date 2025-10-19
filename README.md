@@ -1,6 +1,6 @@
 # Ver El Mundo (See the World) - Travel Planner Application
 
-This travek planner was designed with React, TailwindCSS, and the Amadeus Travel API. The aim is to help users plan their dream vacations or relaxation time. They can set up their itienary by searching destinations, viewing flight offers, booking hotels, and creating personalized itineraries.
+This travel planner was designed with React, TailwindCSS, and the Amadeus Travel API. The aim is to help users plan their dream vacations or relaxation time. They can set up their itienary by searching destinations, viewing flight offers, booking hotels, and creating personalized itineraries.
 
 ![Ver El Mundo](https://alxproject-travelplanner.netlify.app/)
 
@@ -231,8 +231,6 @@ npm install -g netlify-cli
 netlify deploy --prod
 ```
 
-**Important**: Add environment variables in your deployment platform's settings!
-
 ## 🔧 Configuration
 
 ### **Tailwind Configuration**
@@ -249,30 +247,10 @@ Build settings and plugins in `vite.config.js`
 | `VITE_AMADEUS_API_SECRET` | Amadeus API secret | Yes |
 | `VITE_AMADEUS_API_URL` | API base URL | Yes |
 
-## 🐛 Known Issues & Limitations
-
-- Amadeus test API has limited data for some destinations
-- Free tier has rate limits (check Amadeus documentation)
-- Images from Unsplash may vary
-- LocalStorage is used (not synced across devices)
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👨‍💻 Author
 
-**Your Name**
+**Rukevwe Ukwa**
 - GitHub: [@Ruks5](https://github.com/yourusernamehttps://github.com/Ruks5)
 
 ## 🙏 Acknowledgments
